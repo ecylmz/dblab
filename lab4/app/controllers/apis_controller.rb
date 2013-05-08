@@ -10,8 +10,7 @@ class ApisController < ApplicationController
     render :soap => {:name => product.name, :price => product.price, :features => product.features}
   end
 
-  # You can use all Rails features like filtering, too. A SOAP controller
-  # is just like a normal controller with a special routing.
+  # SOAP controller için ozel yonlendirmeyi normal controller gibi loglara bas
   before_filter :dump_parameters
   def dump_parameters
     Rails.logger.debug params.inspect

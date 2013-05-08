@@ -293,3 +293,90 @@ WARNING: Can't verify CSRF token authenticity
   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (0.7ms)
 Completed 200 OK in 50ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/apis/wsdl" for 127.0.0.1 at 2013-05-05 17:50:08 +0300
+Processing by ApisController#_generate_wsdl as */*
+{"controller"=>"apis", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/wsdl.builder (44.9ms)
+Completed 200 OK in 134ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/apis/action" for 127.0.0.1 at 2013-05-05 17:50:08 +0300
+Processing by ApisController#get_product as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"get_product"=>{"id"=>"1"}}}}
+WARNING: Can't verify CSRF token authenticity
+{"id"=>1}
+  [1m[36mProduct Load (6.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (1.3ms)
+Completed 200 OK in 137ms (Views: 6.4ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/apis/wsdl" for 127.0.0.1 at 2013-05-05 17:50:32 +0300
+Processing by ApisController#_generate_wsdl as */*
+{"controller"=>"apis", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/wsdl.builder (3.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/apis/action" for 127.0.0.1 at 2013-05-05 17:50:32 +0300
+Processing by ApisController#get_product as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"get_product"=>{"id"=>"1"}}}}
+WARNING: Can't verify CSRF token authenticity
+{"id"=>1}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (0.6ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/apis/wsdl" for 127.0.0.1 at 2013-05-05 17:51:05 +0300
+Processing by ApisController#_generate_wsdl as */*
+{"controller"=>"apis", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/wsdl.builder (3.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/apis/action" for 127.0.0.1 at 2013-05-05 17:51:05 +0300
+Processing by ApisController#get_product as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"get_product"=>{"id"=>"1"}}}}
+WARNING: Can't verify CSRF token authenticity
+{"id"=>1}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (0.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/apis/wsdl" for 127.0.0.1 at 2013-05-05 17:52:47 +0300
+Processing by ApisController#_generate_wsdl as */*
+{"controller"=>"apis", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/wsdl.builder (3.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/apis/action" for 127.0.0.1 at 2013-05-05 17:52:47 +0300
+Processing by ApisController#get_product as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"get_product"=>{"id"=>"1"}}}}
+WARNING: Can't verify CSRF token authenticity
+{"id"=>1}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (0.6ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/apis/wsdl" for 127.0.0.1 at 2013-05-07 21:57:40 +0300
+Processing by ApisController#_generate_wsdl as */*
+{"controller"=>"apis", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/wsdl.builder (46.3ms)
+Completed 200 OK in 286ms (Views: 285.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/apis/action" for 127.0.0.1 at 2013-05-07 21:57:40 +0300
+Processing by ApisController#get_product as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"get_product"=>{"id"=>"1"}}}}
+WARNING: Can't verify CSRF token authenticity
+{"id"=>1}
+  [1m[36mProduct Load (6.9ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.7.0/app/views/wash_with_soap/rpc/response.builder (35.8ms)
+Completed 200 OK in 202ms (Views: 41.0ms | ActiveRecord: 9.7ms)
