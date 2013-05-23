@@ -1,0 +1,32 @@
+<form action="/student/new" method="post" enctype="multipart/form-data" class="form-horizontal" >
+  <fieldset>
+    <legend>Yeni Öğrenci Kaydı</legend>
+    <div class="control-group">
+      <label class="control-label" for="input02">Ad (*)</label>
+      <div class="controls">
+	<input type="text" class="input-xlarge required" id="input02" name="firstname" value="">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input03">Soyad (*)</label>
+      <div class="controls">
+	<input type="text" class="input-xlarge required" id="input03" name="lastname" value="">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="select02">Bölüm (*)</label>
+      <div class="controls">
+	<select class="input-xlarge required" id="select02" name="department_id">
+	  <option value=""></option>
+	  <% Department.all.each do |department| %>
+	    <option value="<%= department[:id] %>"><%= department[:name] %></option>
+	  <% end %>
+	</select>
+      </div>
+    </div>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <a class="btn" href="/">İptal</a>
+  </div>
+</form>
+

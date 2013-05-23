@@ -1,0 +1,43 @@
+<form action="/student/search_with_soap" method="post" enctype="multipart/form-data" class="form-horizontal" >
+  <fieldset>
+    <legend>Öğrenci Bul</legend>
+    <div class="control-group">
+      <label class="control-label" for="input02">Öğrenci ID (*)</label>
+      <div class="controls">
+	<input type="text" class="input-xlarge required" id="input02" name="id" value="">
+      </div>
+    </div>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Bul</button>
+    <a class="btn" href="/">İptal</a>
+  </div>
+  </fieldset>
+</form>
+
+</br>
+</br>
+<% if @result %>
+  <b> Arama Sonucu </b></br></br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Bölüm</th>
+        <th>Fakülte</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @result[:id].to_s %></td>
+        <td><%= @result[:firstname].to_s %></td>
+        <td><%= @result[:lastname].to_s %></td>
+        <td><%= @result[:department].to_s %></td>
+        <td><%= @result[:faculty].to_s %></td>
+      </tr>
+    </tbody>
+  </table>
+<% else %>
+  <b>Gösterilecek Öğrenci Yok</b>
+<% end%>
